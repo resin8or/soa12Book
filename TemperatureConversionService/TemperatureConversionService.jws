@@ -10,20 +10,19 @@
       <value n="oracle.adf.share.dt.migration.wsm.PolicyAttachmentMigratorHelper" v="12.1.2.0.0"/>
       <value n="oracle.adfdt.controller.adfc.source.migration.SavePointDataSourceForWLSMigrator" v="11.1.1.1.0"/>
       <value n="oracle.adfdtinternal.model.ide.security.extension.AdfSecurityMigrator" v="11.1.1.1.0.13"/>
-      <value n="oracle.ide.model.Project" v="11.1.1.1.0;12.2.1.1.0"/>
+      <value n="oracle.ide.model.Project" v="11.1.1.1.0;12.1.3.0.0"/>
       <value n="oracle.jbo.dt.jdevx.deployment.JbdProjectMigrator" v="11.1.2.0.0"/>
-      <value n="oracle.jdeveloper.maven.migrator.POMNodeMigrator" v="12.2.1.0.0"/>
       <value n="oracle.jdevimpl.appresources.ApplicationSrcDirMigrator" v="11.1.2.0.0"/>
       <value n="oracle.jdevimpl.deploy.migrators.JeeDeploymentMigrator" v="12.1.2.0.0"/>
-      <value n="oracle.jdevimpl.xml.oc4j.jps.JpsConfigMigratorHelper" v="12.1.4.0.0"/>
+      <value n="oracle.jdevimpl.xml.oc4j.jps.JpsConfigMigratorHelper" v="11.1.1.1.0.1"/>
       <value n="oracle.jdevimpl.xml.wl.WeblogicMigratorHelper" v="11.1.1.1.0"/>
       <value n="oracle.mds.internal.dt.deploy.base.MarMigratorHelper" v="11.1.1.1.0"/>
       <value n="oracle.mds.internal.dt.ide.migrator.MDSConfigMigratorHelper" v="11.1.1.0.5313"/>
    </hash>
    <list n="contentSets">
       <string v="oracle.mds.internal.dt.ide.appresources.MDSAppResourceCSProvider/MDSAppContentSet"/>
-      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ADFContentSet"/>
+      <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationSrcContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ApplicationBuildToolContentSet"/>
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
@@ -32,13 +31,13 @@
    </list>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="TemperatureConversionService">
+         <hash n="TemperatureConversionService_Project1_ServiceBusProfile">
             <value n="profileClass" v="SbAppDeployProfile"/>
-            <value n="profileName" v="TemperatureConversionService"/>
+            <value n="profileName" v="TemperatureConversionService_Project1_ServiceBusProfile"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="TemperatureConversionService"/>
+         <string v="TemperatureConversionService_Project1_ServiceBusProfile"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
@@ -47,6 +46,6 @@
       </hash>
    </hash>
    <hash n="oracle.sb.tooling.ide.core.internal.application.SbApplication">
-      <value n="configContextSessionName" v="OSB-IDE_build_1477505994473"/>
+      <value n="configContextSessionName" v="OSB-IDE_build_1477558120150"/>
    </hash>
 </jws:workspace>

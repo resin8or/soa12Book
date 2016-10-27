@@ -11,6 +11,7 @@
 
     <modules>
         <module>System</module>
+        <module>TemperatureConversionService</module>
     </modules>
 
 </project>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con1="http://www.bea.com/wli/sb/stages/config" xmlns:con2="http://www.bea.com/wli/sb/stages/transform/config">
     <con:coreEntry>
         <con:binding type="SOAP" isSoap12="false" xsi:type="con:SoapBindingType">
             <con:wsdl ref="TemperatureConversionService/WSDLs/TemperatureConversionService"/>
@@ -13,22 +13,34 @@
         </con:xqConfiguration>
     </con:coreEntry>
     <con:router>
-        <con:pipeline type="request" name="request-N3f57fffc.1155d647.0.15801cdac78.N7ffd">
-            <con:stage id="_StageId-N3f57fffc.1155d647.0.15801cdac78.N7ffb" name="Stage1">
-                <con:context/>
-                <con:actions/>
+        <con:pipeline type="request" name="request-a200106.N21ca4a80.0.15805786c7d.N8000">
+            <con:stage id="_StageId-a200106.N21ca4a80.0.15805786c7d.N7ffe" name="Stage1">
+                <con:context>
+                    <con1:userNsDecl prefix="con" namespace="saibot.airport/services/utility/conversion"/>
+                </con:context>
+                <con:actions>
+                    <con2:replace varName="body" contents-only="true">
+                        <con1:id>_ActionId-a200106.243fe2f.0.15805990a3a.N7ffe</con1:id>
+                        <con2:expr>
+                            <con1:xsltTransform>
+                                <con1:resource ref="TemperatureConversionService/Transformations/TemperatureCelsiusToFahrenheitRequestToResponse"/>
+                                <con1:input>$body/con:temperatureCelsiusToFahrenheitRequestMessage</con1:input>
+                            </con1:xsltTransform>
+                        </con2:expr>
+                    </con2:replace>
+                </con:actions>
             </con:stage>
         </con:pipeline>
-        <con:pipeline type="response" name="response-N3f57fffc.1155d647.0.15801cdac78.N7ffc">
-            <con:stage id="_StageId-N3f57fffc.1155d647.0.15801cdac78.N7ffa" name="Stage1">
+        <con:pipeline type="response" name="response-a200106.N21ca4a80.0.15805786c7d.N7fff">
+            <con:stage id="_StageId-a200106.N21ca4a80.0.15805786c7d.N7ffd" name="Stage1">
                 <con:context/>
                 <con:actions/>
             </con:stage>
         </con:pipeline>
         <con:flow>
-            <con:pipeline-node name="Pipeline Pair Node1">
-                <con:request>request-N3f57fffc.1155d647.0.15801cdac78.N7ffd</con:request>
-                <con:response>response-N3f57fffc.1155d647.0.15801cdac78.N7ffc</con:response>
+            <con:pipeline-node name="PipelinePairNode1">
+                <con:request>request-a200106.N21ca4a80.0.15805786c7d.N8000</con:request>
+                <con:response>response-a200106.N21ca4a80.0.15805786c7d.N7fff</con:response>
             </con:pipeline-node>
         </con:flow>
     </con:router>
